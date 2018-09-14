@@ -27,19 +27,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 array= new ArrayList<>();
-                array.add("Ha Noi");
-                array.add("Quang Ninh");
-                array.add("Thai Binh");
-                array.add("Quang Binh");
-                array.add("Quang Tri");
-                array.add("Thua Thien Hue");
-                array.add("Da Nang");
-                array.add("Quang Nam");
-                array.add("Quang Ngai");
-                array.add("Ninh Thuan");
-                array.add("Da Lat");
-                array.add("Phu Yen");
-                array.add("Ho Chi Minh");
+                array.add("HA NOI");
+                array.add("NGHE AN");
+                array.add("HA TINH");
+                array.add("QUANG BINH");
+                array.add("QUANG TRI");
+                array.add("THUA THIEN HUE");
+                array.add("QUANG NAM");
+                array.add("DA NANG");
+                array.add("QUANG NGAI");
+                array.add("NINH THUAN");
+                array.add("BINH THUAN");
+                array.add("KHANH HOA");
+                array.add("HO CHI MINH");
                 ArrayAdapter adapter = new ArrayAdapter(MainActivity.this, android.R.layout.simple_list_item_1,array);
                 lv.setAdapter(adapter);
                 lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -47,8 +47,9 @@ public class MainActivity extends AppCompatActivity {
                     public void onItemClick(AdapterView<?> parent, View view,int i , long id) {
                         String noidung= array.get(i);
                         Intent intent = new Intent(MainActivity.this,Main2Activity.class);
-                        intent.putExtra("info",noidung);
+                            intent.putExtra("info",noidung);
                         startActivity(intent);
+
                         Toast.makeText(MainActivity.this,noidung, Toast.LENGTH_LONG).show();
                     }
                 });
